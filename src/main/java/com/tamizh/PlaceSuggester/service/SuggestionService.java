@@ -82,39 +82,6 @@ public class SuggestionService implements SuggestionInterface{
 			return null;
 		}
 	}
-	
-	public void testMethod() {
-		String test = "test";
-		ApiClient defaultClient = Configuration.getDefaultApiClient();
-		HashMap<String, String> secrets = new HashMap<>();
-		secrets.put("apiKeyAuth", "7eb652a4771311f8a4da52dbf4632830");
-		secrets.put("appKeyAuth", "8c4673c217f09fcb73e37e833b16886b5b35eb5a");
-		defaultClient.configureApiKeys(secrets);
-	    EventsApi apiInstance = new EventsApi(defaultClient);
-
-	    EventCreateRequest body =
-	        new EventCreateRequest()
-	            .title("Example-Post_an_event_returns_OK_response")
-	            .text("A text message.")
-	            .tags(
-	                new ArrayList<String>() {
-	                  {
-	                    add("test:ExamplePostaneventreturnsOKresponse");
-	                    add("exceptiontype"+test);
-	                  }
-	                }).sourceTypeName(test).aggregationKey("Cloud");
-
-	    try {
-	      EventCreateResponse result = apiInstance.createEvent(body);
-	      System.out.println(result);
-	    } catch (ApiException e) {
-	      System.err.println("Exception when calling EventsApi#createEvent");
-	      System.err.println("Status code: " + e.getCode());
-	      System.err.println("Reason: " + e.getResponseBody());
-	      System.err.println("Response headers: " + e.getResponseHeaders());
-	      e.printStackTrace();
-	    }
-	  }
 	}
 
 	

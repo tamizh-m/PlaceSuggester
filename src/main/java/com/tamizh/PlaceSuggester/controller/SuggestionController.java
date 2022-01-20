@@ -25,7 +25,6 @@ public class SuggestionController {
 			@RequestParam(required = false)String latLng)
 	{
 		return suggestionService.getSuggestion(location,type, latLng);
-		 //suggestionService.testMethod();
 	}
 	
 }
